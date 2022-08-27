@@ -4,6 +4,7 @@ import logo from '../../static/etFullDark.svg'
 import shortLogo from '../../static/etEye.svg'
 import hamburger from '../../static/hamburger.svg'
 import { HeaderItem } from '../HeaderItem/HeaderItem';
+import { MobileMenu } from '../MobileMenu/MobileMenu';
 
 export const Header: Component = () => {
     return (
@@ -67,6 +68,7 @@ export const Header: Component = () => {
 
             <P.HamburgerWrapper>
                 <P.Hamburger src={hamburger} />
+                <MobileMenu />
             </P.HamburgerWrapper>
         </P.Wrapper>
     )

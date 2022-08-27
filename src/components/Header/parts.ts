@@ -55,6 +55,19 @@ export const Hamburger = styled("img")(({ theme }) => ({
 }));
 
 export const HamburgerWrapper = styled("div")(({ theme }) => ({
+  position: 'relative',
+
+  "& .mobile-menu": {
+    position: "absolute",
+    display: "none",
+    top: 44,
+    right: 10
+  },
+
+  "&:hover .mobile-menu": {
+    display: "block",
+  },
+
   [theme.breakpoints.up("md")]: {
     display: "none",
   },
