@@ -2,6 +2,7 @@ import styled from "@suid/system/styled";
 
 export const Wrapper = styled("div")(({ theme }) => ({
   height: 100,
+  boxSizing: 'border-box',
   width: "100%",
   display: "flex",
   flexDirection: "row",
@@ -26,12 +27,19 @@ export const Logo = styled("img")(({ theme }) => ({
   },
 }));
 
-export const Item = styled("div")(({ theme }) => ({}));
-
 export const ItemsWrapper = styled("div")(({ theme }) => ({
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "space-between",
+
   [theme.breakpoints.down("md")]: {
     display: "none",
   },
+
+  '& .header-item:not(:last-child)': {
+    marginRight: 16
+  }
 }));
 
 export const ShortLogo = styled("img")(({ theme }) => ({
@@ -42,7 +50,9 @@ export const ShortLogo = styled("img")(({ theme }) => ({
   },
 }));
 
-export const Hamburger = styled("img")(({ theme }) => ({}));
+export const Hamburger = styled("img")(({ theme }) => ({
+  height: 50
+}));
 
 export const HamburgerWrapper = styled("div")(({ theme }) => ({
   [theme.breakpoints.up("md")]: {
